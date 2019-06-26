@@ -9,7 +9,7 @@ By executing this PowerShell code it will update your profile.json settings of y
     "backgroundImageOpacity": 0.25,
     "backgroundImageStretchMode": "uniformToFill",
 ```
-    The "useAcrylic" element must be set to false for Background Images to display
+The "useAcrylic" element must be set to false for Background Images to display
 ```
     "useAcrylic":  false
 ```
