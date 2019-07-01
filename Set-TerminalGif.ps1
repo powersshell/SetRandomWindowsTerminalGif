@@ -68,8 +68,10 @@ Function Set-ProfileGif{
     foreach($profile in $settings.profiles){
         if($profile.backgroundImage -ne $null){
             $gif = Get-RandomGif -FolderName $GifsFolder
-            $gif = $gif -replace '\\', '/'
-            $profile.backgroundImage = $gif
+            if ($gif.length -gt 0){
+                $gif = $gif -replace '\\', '/'
+                $profile.backgroundImage = $gif
+            }
         }
     }
     $outputFile = $settings | ConvertTo-Json -Depth 10
