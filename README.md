@@ -9,10 +9,6 @@ By executing this PowerShell code it will update your profile.json settings of y
     "backgroundImageOpacity": 0.25,
     "backgroundImageStretchMode": "uniformToFill",
 ```
-The "useAcrylic" element must be set to false for Background Images to display
-```
-    "useAcrylic":  false
-```
 * You have download 1 or more gif's and saved them into a folder on your computer
 * On Line 2 of the script set your gif's folder path location
 
