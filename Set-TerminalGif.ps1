@@ -47,7 +47,7 @@ Function Get-Profiles{
         [String]
         $ProfileFile
     )
-    $json = Get-Content $ProfileFile | ConvertFrom-Json 
+    $json = Get-Content $ProfileFile | ConvertFrom-Json
     return $json
 }
 
@@ -66,7 +66,7 @@ Function Set-ProfileGif{
     )
     $settings = Get-Profiles -ProfileFile $TerminalProfileSettings
     foreach($profile in $settings.profiles){
-        if($profile.backgroundImage -ne $null){
+        if($null -ne $profile.backgroundImage){
             $gif = Get-RandomGif -FolderName $GifsFolder
             if ($gif.length -gt 0){
                 $gif = $gif -replace '\\', '/'
@@ -76,7 +76,7 @@ Function Set-ProfileGif{
     }
     $outputFile = $settings | ConvertTo-Json -Depth 10
    # Write-Host $outputFile
-    Set-Content -Path $TerminalProfileSettings -Value $outputFile    
+    Set-Content -Path $TerminalProfileSettings -Value $outputFile
 
 }
 
