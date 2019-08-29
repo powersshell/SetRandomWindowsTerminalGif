@@ -1,0 +1,15 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: mcr.microsoft.com/powershell
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a multi-line script
+      run: |
+        Write-Host "Hello-World"
+        Write-Host "Hello-World 2"
